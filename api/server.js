@@ -1,4 +1,5 @@
 const express = require('express');
+const helmet = require('helmet');
 
 const server = express();
 
@@ -7,6 +8,9 @@ const userRouter = require("../users/userRouter");
 
 
 //GLOBAL Middleware
+
+// third-party middleware
+server.use(helmet());
 
 // built in middleware
 server.use(express.json()); // parses body
