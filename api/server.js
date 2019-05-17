@@ -3,7 +3,7 @@ const express = require('express');
 const server = express();
 
 // import routers
-const userRouter = require("./users/userRouter");
+const userRouter = require("../users/userRouter");
 
 
 //GLOBAL Middleware

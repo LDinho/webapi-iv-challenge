@@ -1,14 +1,15 @@
-const server = require('./server');
+require('dotenv').config();
 
-const port = 8005;
+const server = require('./api/server');
 
-const message = 'Server is running on';
+const PORT = process.env.PORT || 8002;
 
-const portAndMessage =
-  `\n*** ${message} http://localhost:${port} ***\n`;
+const message = 'Server Running on';
+
+const portAndMessage = `\n*** ${message} http://localhost:${PORT} ***\n`;
 
 // listening
-server.listen(port, ()=> {
+server.listen(PORT, () => {
   console.log(portAndMessage);
 
 });
